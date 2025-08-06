@@ -17,6 +17,7 @@ import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -226,7 +227,7 @@ public class vista extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Venta ID", "Nombre del Cliente", "Rut del cliente", "Codigo Videojuego"
+                "Venta ID", "Nombre del Cliente", "Rut del cliente", "Código Videojuego"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -303,21 +304,19 @@ public class vista extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelErrorVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(461, 461, 461))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(96, 96, 96)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addComponent(jLabel3)
-                        .addGap(105, 105, 105)
-                        .addComponent(jLabel4)
-                        .addGap(76, 76, 76)
-                        .addComponent(jLabel6)
-                        .addGap(105, 105, 105)
-                        .addComponent(jLabel5))
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonActualizarVentas)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jToggleAgregarVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
+                        .addGap(296, 296, 296)
                         .addComponent(jTextVENTAID, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jTextNOMBREDELCLIENTE, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -325,45 +324,48 @@ public class vista extends javax.swing.JFrame {
                         .addComponent(jTextRUTDELCLIENTE, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jTextIDVIDEOJUEGO, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(jButtonBuscarVENTAS, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(141, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(jButtonActualizarVentas)
-                        .addGap(34, 34, 34))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabelErrorVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(374, 374, 374))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonBuscarVENTAS, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jToggleAgregarVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(355, 355, 355)
+                        .addComponent(jLabel3)
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel4)
+                        .addGap(76, 76, 76)
+                        .addComponent(jLabel6)
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel5)))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonActualizarVentas)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addComponent(jButtonActualizarVentas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(jLabel6))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextNOMBREDELCLIENTE, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonBuscarVENTAS, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextRUTDELCLIENTE)
-                    .addComponent(jTextVENTAID, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextIDVIDEOJUEGO, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jToggleAgregarVentas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jToggleAgregarVentas)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonBuscarVENTAS))
+                    .addComponent(jTextIDVIDEOJUEGO, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextNOMBREDELCLIENTE, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTextRUTDELCLIENTE)
+                        .addComponent(jTextVENTAID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(jLabelErrorVentas)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
 
         Tabla_Completa.addTab("Ventas", jPanel3);
@@ -446,65 +448,74 @@ public class vista extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(126, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonActualizarClientes)
-                        .addGap(20, 20, 20))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabelErrorClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(386, 386, 386))))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(164, 164, 164)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButtonActualizarClientes)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1276, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(209, 209, 209)
-                        .addComponent(jLabel1)
-                        .addGap(134, 134, 134)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButtonEliminarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextRUT, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextNOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jToggleAgregarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonModificarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelErrorClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(96, 96, 96)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(148, 148, 148)
+                                .addComponent(jLabel2)
+                                .addGap(54, 54, 54))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jTextRUT, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextNOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jToggleAgregarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButtonModificarCliente))
+                        .addGap(279, 279, 279)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonEliminarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jButtonActualizarClientes)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jButtonActualizarClientes)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabelErrorClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButtonBuscarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonEliminarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(25, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(48, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonModificarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                    .addComponent(jButtonBuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonEliminarCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextRUT, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextNOMBRE, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jToggleAgregarCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelErrorClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(jToggleAgregarCliente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonModificarCliente))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextNOMBRE, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTextRUT, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(38, 38, 38))))
         );
 
         Tabla_Completa.addTab("Clientes", jPanel1);
@@ -514,7 +525,7 @@ public class vista extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Codigo", "Titulo", "Plataforma", "Precio", "Estado", "Imagen"
+                "Código", "Título", "Plataforma", "Precio", "Estado", "Imagen"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -556,7 +567,7 @@ public class vista extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setText("Codigo");
+        jLabel7.setText("Código");
 
         jTextTituloVideojuego.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -564,7 +575,7 @@ public class vista extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Titulo");
+        jLabel8.setText("Título");
 
         jToggleEliminarVideojuego.setText("Eliminar");
         jToggleEliminarVideojuego.addActionListener(new java.awt.event.ActionListener() {
@@ -622,101 +633,103 @@ public class vista extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jToggleEliminarVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextCodigoVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextTituloVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextPlataformaVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextPrecioVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(134, 134, 134)
-                        .addComponent(jLabel8)
-                        .addGap(134, 134, 134)
-                        .addComponent(jLabel9)
-                        .addGap(129, 129, 129)
-                        .addComponent(jLabel11)
-                        .addGap(68, 68, 68)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jTextEstadoVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                        .addComponent(jButtonAgregarVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(jLabel12)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButtonModificarVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonBuscarVideojuegoPlataforma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonBuscarVideojuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(17, 17, 17))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonActualizarVideojuegos))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel13)))
-                .addGap(65, 65, 65))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(427, 427, 427)
-                .addComponent(jLabelErroresVideojuegos, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabelErroresVideojuegos, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(648, 648, 648))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(40, 40, 40)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jTextCodigoVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTextTituloVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextPlataformaVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTextPrecioVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(59, 59, 59)
+                                        .addComponent(jLabel7)
+                                        .addGap(138, 138, 138)
+                                        .addComponent(jLabel8)
+                                        .addGap(137, 137, 137)
+                                        .addComponent(jLabel9)
+                                        .addGap(130, 130, 130)
+                                        .addComponent(jLabel11)
+                                        .addGap(64, 64, 64)))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addComponent(jTextEstadoVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jButtonModificarVideojuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jButtonAgregarVideojuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(75, 75, 75)
+                                        .addComponent(jLabel12)))
+                                .addGap(57, 57, 57)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonBuscarVideojuegoPlataforma, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jButtonBuscarVideojuego)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jToggleEliminarVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(1194, 1194, 1194)
+                                .addComponent(jButtonActualizarVideojuegos))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(332, 332, 332))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
+                        .addGap(63, 63, 63)
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(jButtonActualizarVideojuegos)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel13))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel7)
                                     .addComponent(jLabel8)
                                     .addComponent(jLabel9)
-                                    .addComponent(jLabel11))
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel12))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextTituloVideojuego)
-                                    .addComponent(jTextPlataformaVideojuego)
-                                    .addComponent(jTextPrecioVideojuego)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jButtonAgregarVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonModificarVideojuego)
+                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(jTextCodigoVideojuego)
-                                    .addComponent(jToggleEliminarVideojuego, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextEstadoVideojuego)))
-                            .addComponent(jLabel12)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonBuscarVideojuegoPlataforma, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButtonAgregarVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButtonModificarVideojuego, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButtonBuscarVideojuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextTituloVideojuego)
+                                    .addComponent(jTextEstadoVideojuego)
+                                    .addComponent(jTextPlataformaVideojuego)
+                                    .addComponent(jTextPrecioVideojuego, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(17, 17, 17))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonBuscarVideojuegoPlataforma, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonBuscarVideojuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jToggleEliminarVideojuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(1686, 1686, 1686)))
                 .addComponent(jLabelErroresVideojuegos)
                 .addGap(11, 11, 11))
         );
@@ -727,7 +740,7 @@ public class vista extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Tabla_Completa)
+            .addComponent(Tabla_Completa, javax.swing.GroupLayout.PREFERRED_SIZE, 1380, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -739,51 +752,58 @@ public class vista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonActualizarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarClientesActionPerformed
-        DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
-        model.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
-        for (Cliente cliente : controladorCliente.listarClientes()) {
-            model.addRow(new Object[]{cliente.getNombre(), cliente.getRut()});
-        }
-    }//GEN-LAST:event_jButtonActualizarClientesActionPerformed
-
-    private void jButtonActualizarVideojuegosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarVideojuegosActionPerformed
-        actualizarVistas();
-    }//GEN-LAST:event_jButtonActualizarVideojuegosActionPerformed
-
-    private void jTextRUTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextRUTActionPerformed
+    private void jTextIDVIDEOJUEGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIDVIDEOJUEGOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextRUTActionPerformed
+    }//GEN-LAST:event_jTextIDVIDEOJUEGOActionPerformed
 
-    private void jTextNOMBREActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNOMBREActionPerformed
+    private void jTextRUTDELCLIENTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextRUTDELCLIENTEActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextNOMBREActionPerformed
+    }//GEN-LAST:event_jTextRUTDELCLIENTEActionPerformed
 
-    private void jToggleAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleAgregarClienteActionPerformed
-    String rut = jTextRUT.getText();
-    String cliente = jTextNOMBRE.getText();
-    if (controladorCliente.buscarCliente(rut)!=null){
-        jLabelErrorClientes.setText("Debes ingresar un rut unico");
-    }else {
-    if (rut.length()>1 && cliente.length()>1){
-    controladorCliente.registrarCliente(new Cliente(rut,cliente));
-    DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
-        model.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
-        for (Cliente cliente1 : controladorCliente.listarClientes()) {
-            model.addRow(new Object[]{cliente1.getNombre(), cliente1.getRut()});
+    private void jButtonBuscarVENTASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarVENTASActionPerformed
+        // TODO add your handling code here:
+        String rut_cliente = jTextRUTDELCLIENTE.getText();
+
+        if (rut_cliente.length()>1){
+            DefaultTableModel model_ventas = (DefaultTableModel) jTableVentas.getModel();
+            model_ventas.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
+            for (String escritura : controladorVenta.listarVentasPorRut(rut_cliente)) {
+                String [] datos = escritura.split(", ");
+                model_ventas.addRow(new Object[]{datos[0],datos[2],datos[1],datos[3]});
+            }
+
+        } else{
+            jLabelErrorVentas.setText("Debes ingresar todos los campos para poder agregar una venta!");
         }
-    } else{
-    jLabelErrorClientes.setText("Debes ingresar un rut y un nombre como minimo");
-    }}
-    
-    
-    
-        
-        
-        
-        
-        
-    }//GEN-LAST:event_jToggleAgregarClienteActionPerformed
+    }//GEN-LAST:event_jButtonBuscarVENTASActionPerformed
+
+    private void jToggleAgregarVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleAgregarVentasActionPerformed
+        // TODO add your handling code here:
+        String venta_id = jTextVENTAID.getText();
+        String nombre_de_cliente = jTextNOMBREDELCLIENTE.getText();
+        String rut_cliente = jTextRUTDELCLIENTE.getText();
+        String id_videojuego = jTextIDVIDEOJUEGO.getText();
+
+        if (controladorVideojuego.buscarVideojuegoCodigo(id_videojuego).getEstado()==0){
+            if (venta_id.length()>=1 && nombre_de_cliente.length()>1 && rut_cliente.length()>1 && id_videojuego.length()>1 ){
+                controladorVenta.registrarVenta(new Venta(Integer.parseInt(venta_id),java.sql.Date.valueOf("2024-12-08"),rut_cliente), id_videojuego);
+                Videojuego parcial = videojuegoDAO.buscarVideojuegoCodigo(id_videojuego);
+                controladorVideojuego.modificarVideojuego(new Videojuego(parcial.getCodigo(),parcial.getTitulo(),parcial.getPlataforma(),parcial.getPrecio(),1));
+                actualizarVistas();
+            } else{
+                jLabelErrorVentas.setText("Debes ingresar todos los campos para poder agregar una venta!");
+            }}else{
+                jLabelErrorVentas.setText("Debes ingresar un videojuego disponible");
+            }
+    }//GEN-LAST:event_jToggleAgregarVentasActionPerformed
+
+    private void jTextNOMBREDELCLIENTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNOMBREDELCLIENTEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextNOMBREDELCLIENTEActionPerformed
+
+    private void jTextVENTAIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextVENTAIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextVENTAIDActionPerformed
 
     private void jButtonActualizarVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarVentasActionPerformed
         DefaultTableModel model_ventas = (DefaultTableModel) jTableVentas.getModel();
@@ -794,105 +814,98 @@ public class vista extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonActualizarVentasActionPerformed
 
-    private void jButtonEliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarClienteActionPerformed
-    String rut = jTextRUT.getText();
-    if (controladorVenta.listarVentasPorRut(rut).size()>0){
-        jLabelErrorClientes.setText("Debes ingresar un rut de alguien que no tenga ventas asociadas");
-    }
-    else if (rut.length()>1){
-    controladorCliente.eliminarCliente(rut);
-    actualizarVistas();
-    } else{
-    jLabelErrorClientes.setText("Debes ingresar un rut para poder eliminar a alguien");
-    }
-    }//GEN-LAST:event_jButtonEliminarClienteActionPerformed
-
-    private void jButtonBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarClienteActionPerformed
+    private void jButtonBuscarVideojuegoPlataformaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarVideojuegoPlataformaActionPerformed
         // TODO add your handling code here:
-    String rut = jTextRUT.getText();
-    if (rut.length()>1){
-        DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
-        model.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
-    
-            model.addRow(new Object[]{controladorCliente.buscarCliente(rut).getNombre(), controladorCliente.buscarCliente(rut).getRut()});
-        
-    }
-     else{
-    jLabelErrorClientes.setText("Debes ingresar un rut para poder buscar a alguien");
-    }
-    }//GEN-LAST:event_jButtonBuscarClienteActionPerformed
+        String plataforma = jTextPlataformaVideojuego.getText();
 
-    private void jToggleAgregarVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleAgregarVentasActionPerformed
-        // TODO add your handling code here:
-    String venta_id = jTextVENTAID.getText();
-    String nombre_de_cliente = jTextNOMBREDELCLIENTE.getText();
-    String rut_cliente = jTextRUTDELCLIENTE.getText();
-    String id_videojuego = jTextIDVIDEOJUEGO.getText();
-    
-    if (controladorVideojuego.buscarVideojuegoCodigo(id_videojuego).getEstado()==0){
-    if (venta_id.length()>=1 && nombre_de_cliente.length()>1 && rut_cliente.length()>1 && id_videojuego.length()>1 ){
-        controladorVenta.registrarVenta(new Venta(Integer.parseInt(venta_id),java.sql.Date.valueOf("2024-12-08"),rut_cliente), id_videojuego);
-        Videojuego parcial = videojuegoDAO.buscarVideojuegoCodigo(id_videojuego);
-        controladorVideojuego.modificarVideojuego(new Videojuego(parcial.getCodigo(),parcial.getTitulo(),parcial.getPlataforma(),parcial.getPrecio(),1));
-        actualizarVistas();
-    } else{
-    jLabelErrorVentas.setText("Debes ingresar todos los campos para poder agregar una venta!");
-    }}else{
-        jLabelErrorVentas.setText("Debes ingresar un videojuego disponible");
-    }
-    }//GEN-LAST:event_jToggleAgregarVentasActionPerformed
+        if (plataforma.length() > 1){
+            DefaultTableModel model_videojuegos = (DefaultTableModel) jTableVideojuegos.getModel();
+            model_videojuegos.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
 
-    private void jButtonBuscarVENTASActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarVENTASActionPerformed
-        // TODO add your handling code here:
-    String rut_cliente = jTextRUTDELCLIENTE.getText();
+            for (Videojuego lista : controladorVideojuego.buscarVideojuegoPlataforma(plataforma)){
+                String disponibilidad = "Disponible";
+                if (lista.getEstado() == 1) {
+                    disponibilidad = "No Disponible";
+                }
+                ImageIcon icono = cargarImagen(lista.getTitulo());
+                model_videojuegos.addRow(new Object[]{lista.getCodigo(),lista.getTitulo(),lista.getPlataforma(),lista.getPrecio(),disponibilidad,icono});
+            }
+        } else{
+            JOptionPane.showMessageDialog(null, "Debes ingresar una plataforma");
 
-    
-    if (rut_cliente.length()>1){
-        DefaultTableModel model_ventas = (DefaultTableModel) jTableVentas.getModel();
-        model_ventas.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
-        for (String escritura : controladorVenta.listarVentasPorRut(rut_cliente)) {
-            String [] datos = escritura.split(", ");
-            model_ventas.addRow(new Object[]{datos[0],datos[2],datos[1],datos[3]});
         }
-        
-        
-        
-    } else{
-    jLabelErrorVentas.setText("Debes ingresar todos los campos para poder agregar una venta!");
-    }
-    }//GEN-LAST:event_jButtonBuscarVENTASActionPerformed
+    }//GEN-LAST:event_jButtonBuscarVideojuegoPlataformaActionPerformed
 
-    private void jTextVENTAIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextVENTAIDActionPerformed
+    private void jTextEstadoVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEstadoVideojuegoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextVENTAIDActionPerformed
+    }//GEN-LAST:event_jTextEstadoVideojuegoActionPerformed
 
-    private void jTextNOMBREDELCLIENTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNOMBREDELCLIENTEActionPerformed
+    private void jTextPlataformaVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextPlataformaVideojuegoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextNOMBREDELCLIENTEActionPerformed
+    }//GEN-LAST:event_jTextPlataformaVideojuegoActionPerformed
 
-    private void jTextRUTDELCLIENTEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextRUTDELCLIENTEActionPerformed
+    private void jTextPrecioVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextPrecioVideojuegoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextRUTDELCLIENTEActionPerformed
+    }//GEN-LAST:event_jTextPrecioVideojuegoActionPerformed
 
-    private void jTextIDVIDEOJUEGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextIDVIDEOJUEGOActionPerformed
+    private void jButtonModificarVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarVideojuegoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextIDVIDEOJUEGOActionPerformed
-
-    private void jButtonModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarClienteActionPerformed
-        // TODO add your handling code here:
-    String rut = jTextRUT.getText();
-    String cliente = jTextNOMBRE.getText();
-    if (rut.length()>1 && cliente.length()>1){
-    controladorCliente.modificarCliente(new Cliente(rut,cliente));
-    DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
-        model.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
-        for (Cliente cliente1 : controladorCliente.listarClientes()) {
-            model.addRow(new Object[]{cliente1.getNombre(), cliente1.getRut()});
+        String codigo = jTextCodigoVideojuego.getText();
+        String titulo = jTextTituloVideojuego.getText();
+        String plataforma = jTextPlataformaVideojuego.getText();
+        String precio = jTextPrecioVideojuego.getText();
+        String estado = jTextEstadoVideojuego.getText();
+        if (codigo.length()>1 && titulo.length()>1 && plataforma.length()>1 && precio.length() > 1 && estado.length()>=0 ){
+            ImageRenamer renamer = new ImageRenamer();
+            String old = controladorVideojuego.buscarVideojuegoCodigo(codigo).getTitulo();
+            String new_name_viva_chile = titulo;
+            renamer.renombrarImagen(old, new_name_viva_chile);
+            int precio_1 = Integer.parseInt(precio);
+            int estado_1 = 0;
+            if (estado.toLowerCase().equals("no disponible")){estado_1=1;}
+            if (estado.toLowerCase().equals("disponible")){estado_1=0;}
+            System.out.println(controladorVideojuego.modificarVideojuego(new Videojuego(codigo,titulo,plataforma,precio_1,estado_1)));
+            actualizarVistas();
+        } else{
+            JOptionPane.showMessageDialog(null, "Debes ingresar la información completa para realizar una modificación");
         }
-    } else{
-    jLabelErrorClientes.setText("Debes ingresar un rut y un nombre como minimo");
-    }
-    }//GEN-LAST:event_jButtonModificarClienteActionPerformed
+    }//GEN-LAST:event_jButtonModificarVideojuegoActionPerformed
+
+    private void jButtonBuscarVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarVideojuegoActionPerformed
+        // TODO add your handling code here:
+        String titulo = jTextTituloVideojuego.getText();
+
+        if (titulo.length() > 1){
+            DefaultTableModel model_videojuegos = (DefaultTableModel) jTableVideojuegos.getModel();
+            model_videojuegos.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
+            String disponibilidad = "";
+            if (controladorVideojuego.buscarVideojuego(titulo).getEstado() == 1) {
+                disponibilidad = "No Disponible";
+            }
+            ImageIcon icono = cargarImagen(titulo);
+            model_videojuegos.addRow(new Object[]{controladorVideojuego.buscarVideojuego(titulo).getCodigo(),controladorVideojuego.buscarVideojuego(titulo).getTitulo(),controladorVideojuego.buscarVideojuego(titulo).getPlataforma(),controladorVideojuego.buscarVideojuego(titulo).getPrecio(), disponibilidad,icono});
+        } else{
+            JOptionPane.showMessageDialog(null, "Debes ingresar un título");
+        }
+    }//GEN-LAST:event_jButtonBuscarVideojuegoActionPerformed
+
+    private void jToggleEliminarVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleEliminarVideojuegoActionPerformed
+        String titulo = jTextTituloVideojuego.getText();
+        if (titulo.length() > 1){
+            controladorVideojuego.eliminarVideojuego(titulo);
+            actualizarVistas();
+        } else{
+            jLabelErroresVideojuegos.setText("Debes ingresar el titulo para poder eliminar un videojuego");
+        }
+    }//GEN-LAST:event_jToggleEliminarVideojuegoActionPerformed
+
+    private void jTextTituloVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTituloVideojuegoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextTituloVideojuegoActionPerformed
+
+    private void jTextCodigoVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextCodigoVideojuegoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextCodigoVideojuegoActionPerformed
 
     private void jButtonAgregarVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarVideojuegoActionPerformed
         String codigo = jTextCodigoVideojuego.getText();
@@ -902,139 +915,128 @@ public class vista extends javax.swing.JFrame {
         String estado = jTextEstadoVideojuego.getText();
         JFileChooser file_upload = new JFileChooser();
 
-
-        int res_2 = file_upload.showOpenDialog(null);
-        if (res_2 == JFileChooser.APPROVE_OPTION) {
-
-            File selectedFile = file_upload.getSelectedFile();
-
-
-            String arbitraryFileName =  titulo + ".jpg"; 
-            String destinationPath = "images/" + arbitraryFileName; 
-            File destinationFile = new File(destinationPath);
-
-            try {
-
-                Files.copy(selectedFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-
-
-                System.out.println("Archivo copiado como: " + destinationFile.getAbsolutePath());
-            } catch (IOException e) {
-
-                System.err.println("Error al copiar el archivo: " + e.getMessage());
-            }
-        }
-        
         if (controladorVideojuego.buscarVideojuegoCodigo(codigo) == null) {
             if (codigo.length() > 1 && titulo.length() > 1 && plataforma.length() > 1 && precio.length() > 1 && estado.length() >= 0) {
                 int precio_1 = Integer.parseInt(precio);
                 int estado_1 = 0;
-                if (estado.toLowerCase().equals("no disponible")){estado_1=1;}
-                if (estado.toLowerCase().equals("disponible")){estado_1=0;}
+                if (estado.toLowerCase().equals("no disponible")) {
+                    estado_1 = 1;
+                }
+                if (estado.toLowerCase().equals("disponible")) {
+                    estado_1 = 0;
+                }
                 controladorVideojuego.registrarVideojuego(new Videojuego(codigo, titulo, plataforma, precio_1, estado_1));
                 actualizarVistas();
+                int res_2 = file_upload.showOpenDialog(null);
+
+                if (res_2 == JFileChooser.APPROVE_OPTION) {
+
+                    File selectedFile = file_upload.getSelectedFile();
+
+                    String arbitraryFileName = titulo + ".jpg";
+                    String destinationPath = "images/" + arbitraryFileName;
+                    File destinationFile = new File(destinationPath);
+
+                    try {
+
+                        Files.copy(selectedFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+
+                        System.out.println("Archivo copiado como: " + destinationFile.getAbsolutePath());
+                    } catch (IOException e) {
+
+                        System.err.println("Error al copiar el archivo: " + e.getMessage());
+                    }
+                }
             } else {
-                jLabelErroresVideojuegos.setText("Debes ingresar todos los datos para poder agregar a alguien");
+                JOptionPane.showMessageDialog(null, "Debes ingresar toda la información para poder agregar un título");
             }
 
         } else if (controladorVideojuego.buscarVideojuegoCodigo(codigo).getCodigo() != null) {
-            jLabelErroresVideojuegos.setText("El codigo del videojuego ya existe, porfavor ingrese el correcto");
+            JOptionPane.showMessageDialog(null, "El codigo del videojuego ya existe, porfavor ingrese uno disponible");
         }
-
-
     }//GEN-LAST:event_jButtonAgregarVideojuegoActionPerformed
 
-    private void jTextCodigoVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextCodigoVideojuegoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextCodigoVideojuegoActionPerformed
-
-    private void jTextTituloVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTituloVideojuegoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextTituloVideojuegoActionPerformed
-
-    private void jToggleEliminarVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleEliminarVideojuegoActionPerformed
-    String titulo = jTextTituloVideojuego.getText();
-    if (titulo.length() > 1){
-        controladorVideojuego.eliminarVideojuego(titulo);
+    private void jButtonActualizarVideojuegosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarVideojuegosActionPerformed
         actualizarVistas();
-    } else{
-        jLabelErroresVideojuegos.setText("Debes ingresar el titulo para poder eliminar un videojuego");
-    }
-    }//GEN-LAST:event_jToggleEliminarVideojuegoActionPerformed
+    }//GEN-LAST:event_jButtonActualizarVideojuegosActionPerformed
 
-    private void jButtonBuscarVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarVideojuegoActionPerformed
+    private void jButtonModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarClienteActionPerformed
         // TODO add your handling code here:
-    String titulo = jTextTituloVideojuego.getText();
-    
-    if (titulo.length() > 1){
-            DefaultTableModel model_videojuegos = (DefaultTableModel) jTableVideojuegos.getModel();
-            model_videojuegos.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
-            String disponibilidad = "";
-            if (controladorVideojuego.buscarVideojuego(titulo).getEstado() == 1) {
-                disponibilidad = "No Disponible";
+        String rut = jTextRUT.getText();
+        String cliente = jTextNOMBRE.getText();
+        if (rut.length()>1 && cliente.length()>1){
+            controladorCliente.modificarCliente(new Cliente(rut,cliente));
+            DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
+            model.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
+            for (Cliente cliente1 : controladorCliente.listarClientes()) {
+                model.addRow(new Object[]{cliente1.getNombre(), cliente1.getRut()});
             }
-            ImageIcon icono = cargarImagen(titulo);
-            model_videojuegos.addRow(new Object[]{controladorVideojuego.buscarVideojuego(titulo).getCodigo(),controladorVideojuego.buscarVideojuego(titulo).getTitulo(),controladorVideojuego.buscarVideojuego(titulo).getPlataforma(),controladorVideojuego.buscarVideojuego(titulo).getPrecio(), disponibilidad,icono});
-    } else{
-        jLabelErroresVideojuegos.setText("Debes ingresar todos los datos para poder eliminar un videojuego");
-    }
-    }//GEN-LAST:event_jButtonBuscarVideojuegoActionPerformed
+        } else{
+            jLabelErrorClientes.setText("Debes ingresar un rut y un nombre como minimo");
+        }
+    }//GEN-LAST:event_jButtonModificarClienteActionPerformed
 
-    private void jButtonModificarVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarVideojuegoActionPerformed
+    private void jButtonBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarClienteActionPerformed
         // TODO add your handling code here:
-    String codigo = jTextCodigoVideojuego.getText();
-    String titulo = jTextTituloVideojuego.getText();
-    String plataforma = jTextPlataformaVideojuego.getText();
-    String precio = jTextPrecioVideojuego.getText();
-    String estado = jTextEstadoVideojuego.getText();
-    if (codigo.length()>1 && titulo.length()>1 && plataforma.length()>1 && precio.length() > 1 && estado.length()>=0 ){
-        ImageRenamer renamer = new ImageRenamer();
-        String old = controladorVideojuego.buscarVideojuegoCodigo(codigo).getTitulo();
-        String new_name_viva_chile = titulo;
-        renamer.renombrarImagen(old, new_name_viva_chile);
-        int precio_1 = Integer.parseInt(precio);
-        int estado_1 = 0;
-        if (estado.toLowerCase().equals("no disponible")){estado_1=1;}
-        if (estado.toLowerCase().equals("disponible")){estado_1=0;}
-        System.out.println(controladorVideojuego.modificarVideojuego(new Videojuego(codigo,titulo,plataforma,precio_1,estado_1)));
-        actualizarVistas();
-    } else{
-        jLabelErroresVideojuegos.setText("Debes ingresar todos los datos para poder Modificar un videojuego");
-    }
-    }//GEN-LAST:event_jButtonModificarVideojuegoActionPerformed
+        String rut = jTextRUT.getText();
+        if (rut.length()>1){
+            DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
+            model.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
 
-    private void jTextPrecioVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextPrecioVideojuegoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextPrecioVideojuegoActionPerformed
+            model.addRow(new Object[]{controladorCliente.buscarCliente(rut).getNombre(), controladorCliente.buscarCliente(rut).getRut()});
 
-    private void jTextPlataformaVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextPlataformaVideojuegoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextPlataformaVideojuegoActionPerformed
+        }
+        else{
+            jLabelErrorClientes.setText("Debes ingresar un rut para poder buscar a alguien");
+        }
+    }//GEN-LAST:event_jButtonBuscarClienteActionPerformed
 
-    private void jTextEstadoVideojuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextEstadoVideojuegoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextEstadoVideojuegoActionPerformed
+    private void jButtonEliminarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarClienteActionPerformed
+        String rut = jTextRUT.getText();
+        if (controladorVenta.listarVentasPorRut(rut).size()>0){
+            jLabelErrorClientes.setText("Debes ingresar un rut de alguien que no tenga ventas asociadas");
+        }
+        else if (rut.length()>1){
+            controladorCliente.eliminarCliente(rut);
+            actualizarVistas();
+        } else{
+            jLabelErrorClientes.setText("Debes ingresar un rut para poder eliminar a alguien");
+        }
+    }//GEN-LAST:event_jButtonEliminarClienteActionPerformed
 
-    private void jButtonBuscarVideojuegoPlataformaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarVideojuegoPlataformaActionPerformed
-        // TODO add your handling code here:
-    String plataforma = jTextPlataformaVideojuego.getText();
-    
-    if (plataforma.length() > 1){
-            DefaultTableModel model_videojuegos = (DefaultTableModel) jTableVideojuegos.getModel();
-            model_videojuegos.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
-            
-            for (Videojuego lista : controladorVideojuego.buscarVideojuegoPlataforma(plataforma)){
-                String disponibilidad = "Disponible";
-                if (lista.getEstado() == 1) {
-                    disponibilidad = "No Disponible";
+    private void jToggleAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleAgregarClienteActionPerformed
+        String rut = jTextRUT.getText();
+        String cliente = jTextNOMBRE.getText();
+        if (controladorCliente.buscarCliente(rut)!=null){
+            jLabelErrorClientes.setText("Debes ingresar un rut unico");
+        }else {
+            if (rut.length()>1 && cliente.length()>1){
+                controladorCliente.registrarCliente(new Cliente(rut,cliente));
+                DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
+                model.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
+                for (Cliente cliente1 : controladorCliente.listarClientes()) {
+                    model.addRow(new Object[]{cliente1.getNombre(), cliente1.getRut()});
                 }
-            ImageIcon icono = cargarImagen(lista.getTitulo());
-            model_videojuegos.addRow(new Object[]{lista.getCodigo(),lista.getTitulo(),lista.getPlataforma(),lista.getPrecio(),disponibilidad,icono});
-            }
-    } else{
-        jLabelErroresVideojuegos.setText("Debes ingresar todos los datos para poder eliminar un videojuego");
-    }    
-    }//GEN-LAST:event_jButtonBuscarVideojuegoPlataformaActionPerformed
+            } else{
+                jLabelErrorClientes.setText("Debes ingresar un rut y un nombre como minimo");
+            }}
+    }//GEN-LAST:event_jToggleAgregarClienteActionPerformed
+
+    private void jTextNOMBREActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNOMBREActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextNOMBREActionPerformed
+
+    private void jTextRUTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextRUTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextRUTActionPerformed
+
+    private void jButtonActualizarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarClientesActionPerformed
+        DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
+        model.setRowCount(0); // esto que coloco aquí lo que hace es limpiar la tabla, la deja clean.
+        for (Cliente cliente : controladorCliente.listarClientes()) {
+            model.addRow(new Object[]{cliente.getNombre(), cliente.getRut()});
+        }
+    }//GEN-LAST:event_jButtonActualizarClientesActionPerformed
 
     /**
      * @param args the command line arguments
